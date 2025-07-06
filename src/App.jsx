@@ -9,7 +9,7 @@ import Services from "./components/Services";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 import ConfirmOrder from "./components/ConfirmOrder";
-import AdminPanel from "./components/Adminpanel";// ✅ admin panel
+import AdminPanel from "./components/AdminPanel";// ✅ admin panel
 import "./App.css";
 
 const App = () => {
