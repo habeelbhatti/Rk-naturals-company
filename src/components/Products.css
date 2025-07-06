@@ -35,38 +35,39 @@
 .premium-card {
   background: #000000;
   border-radius: 1.5rem;
-  box-shadow: 0 0 30px rgba(208, 213, 208, 0.3);
+  box-shadow: 0 0 25px rgba(208, 213, 208, 0.25);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   text-align: center;
-  max-width: 480px; /* ✅ Wider cards */
+  max-width: 380px; /* 🟢 Slightly narrower cards for premium look */
   width: 100%;
 }
 
 .premium-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 50px rgba(224, 230, 224, 0.5);
+  box-shadow: 0 0 50px rgba(224, 230, 224, 0.4);
 }
 
 .premium-image {
   width: 100%;
-  height: 550px; /* ✅ Extra tall height for images (Desktop) */
+  aspect-ratio: 3 / 4; /* 🟢 Maintain aspect ratio for perfect fit */
   overflow: hidden;
 }
 
 .premium-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ✅ Image perfectly fits card */
+  object-fit: cover; /* ✅ Ensures images fill without distortion */
+  display: block;
 }
 
 .premium-content {
-  padding: 1.8rem;
+  padding: 1.2rem; /* 🟢 Less padding for compact look */
 }
 
 .premium-content h3 {
-  font-size: 2rem;
+  font-size: 1.5rem; /* 🟢 Smaller heading for modern style */
   color: #e3e9e3;
   margin: 0.8rem 0;
   font-weight: 700;
@@ -74,17 +75,18 @@
 
 .premium-content p {
   color: #ccc;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
 }
 
 .add-to-cart {
   background: linear-gradient(90deg, #00ff00, #ffffff, #00ff00);
   color: #000;
   border: none;
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem; /* 🟢 Slightly smaller button */
   border-radius: 2.5rem;
   font-weight: 600;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.4s ease;
 }
@@ -100,8 +102,8 @@
     grid-template-columns: repeat(2, 1fr); /* ✅ Tablet view: 2 cards per row */
   }
 
-  .premium-image {
-    height: 420px; /* ✅ Slightly smaller on tablet */
+  .premium-card {
+    max-width: 320px; /* 🟢 Smaller on tablet */
   }
 }
 
@@ -110,11 +112,13 @@
     grid-template-columns: 1fr; /* ✅ Mobile view: 1 card per row */
   }
 
-  .product-heading {
-    font-size: 2.8rem;
+  .premium-card {
+    max-width: 280px; /* 🟢 Compact cards on mobile */
+    margin: 0 auto; /* 🟢 Center the card on mobile */
   }
 
-  .premium-image {
-    height: 450px; /* ✅ Bigger height on mobile for clear image */
+  .product-heading {
+    font-size: 2.4rem;
   }
 }
+

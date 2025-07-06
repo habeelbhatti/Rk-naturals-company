@@ -13,7 +13,7 @@ import daalMasoor from "../assets/daalmasoor.jpg";
 import daalChana from "../assets/daalchana.jpg";
 import karahiGhostMasala from "../assets/karahighost.jpg";
 import chatMasala from "../assets/chatmasala.jpg";
-import acharGhostMasala from "../assets/acharghost.jpg";
+import acharghostmasala from "../assets/acharghost.jpg"
 import tikkaMasala from "../assets/tikkamasala.jpg";
 import biryaniMasala from "../assets/biryanimasala.jpg";
 import qormaMasala from "../assets/qormamasala.jpg";
@@ -29,7 +29,7 @@ const products = [
   { id: 6, name: "Daal Chana", img: daalChana, price: 320 },
   { id: 7, name: "Karahi Ghost Masala", img: karahiGhostMasala, price: 260 },
   { id: 8, name: "Chat Masala", img: chatMasala, price: 190 },
-  { id: 9, name: "Achar Ghost Masala", img: chatMasala, price: 190 },
+  { id: 9, name: "achar Ghost Masala", img: acharghostmasala, price: 190 },
   { id: 10, name: "Tikka Masala", img: tikkaMasala, price: 220 },
   { id: 11, name: "Biryani Masala", img: biryaniMasala, price: 240},
   { id: 12, name: "Qorma Masala", img: qormaMasala, price: 250 },
