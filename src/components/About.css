@@ -1,0 +1,170 @@
+.about-section {
+  background: #000; /* Pure black background */
+  color: #fff;
+  padding: 6rem 1.5rem 4rem; /* ✅ Top padding added for navbar */
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Banner with Video */
+.banner-card {
+  border-radius: 20px;
+  overflow: hidden;
+  margin: auto;
+  max-width: 1300px;
+  height: 360px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
+  animation: bannerEntrance 1s ease forwards;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.banner-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 45px rgba(255, 99, 71, 0.4);
+}
+
+.banner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Company Intro */
+.company-content {
+  max-width: 850px;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  animation: fadeUp 1s ease forwards;
+}
+
+.company-content h2 {
+  font-size: 2.5rem;
+  color: #00ff88;
+  margin-bottom: 1rem;
+  font-family: "Lora", serif;
+}
+
+/* Achievements Section */
+.achievement-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.achievement-content {
+  flex: 1;
+  order: 1; /* Desktop: Content left */
+}
+
+.achievement-image {
+  flex: 1;
+  order: 2; /* Desktop: Image right */
+}
+
+.achievement-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.achievement-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Our Products Section */
+.products-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  animation: fadeUp 1.4s ease forwards;
+}
+
+.products-content {
+  flex: 1;
+  order: 2; /* Desktop: Content right */
+}
+
+.products-image {
+  flex: 1;
+  order: 1; /* Desktop: Image left */
+}
+
+.products-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.products-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes bannerEntrance {
+  0% {
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 7rem; /* ✅ Extra top padding for mobile navbar */
+  }
+
+  .banner-card {
+    height: 220px;
+  }
+
+  .achievement-section,
+  .products-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .achievement-content,
+  .products-content {
+    order: 2; /* Mobile: Content below image */
+  }
+
+  .achievement-image,
+  .products-image {
+    order: 1; /* Mobile: Image first */
+  }
+
+  .achievement-image img,
+  .products-image img {
+    max-width: 100%;
+  }
+}

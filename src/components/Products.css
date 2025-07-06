@@ -1,0 +1,120 @@
+.product-page {
+  background: #000; /* Premium black background */
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 4rem 1rem;
+}
+
+.product-heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #00ff00, #ffffff, #00ff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  animation: gradientMove 6s ease infinite alternate;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ✅ 3 cards per row on desktop */
+  gap: 2rem;
+  justify-items: center;
+}
+
+.premium-card {
+  background: #000000;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 30px rgba(208, 213, 208, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  text-align: center;
+  max-width: 480px; /* ✅ Wider cards */
+  width: 100%;
+}
+
+.premium-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px rgba(224, 230, 224, 0.5);
+}
+
+.premium-image {
+  width: 100%;
+  height: 550px; /* ✅ Extra tall height for images (Desktop) */
+  overflow: hidden;
+}
+
+.premium-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ Image perfectly fits card */
+}
+
+.premium-content {
+  padding: 1.8rem;
+}
+
+.premium-content h3 {
+  font-size: 2rem;
+  color: #e3e9e3;
+  margin: 0.8rem 0;
+  font-weight: 700;
+}
+
+.premium-content p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-to-cart {
+  background: linear-gradient(90deg, #00ff00, #ffffff, #00ff00);
+  color: #000;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.add-to-cart:hover {
+  background: #fefffe;
+  color: #000;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ Tablet view: 2 cards per row */
+  }
+
+  .premium-image {
+    height: 420px; /* ✅ Slightly smaller on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* ✅ Mobile view: 1 card per row */
+  }
+
+  .product-heading {
+    font-size: 2.8rem;
+  }
+
+  .premium-image {
+    height: 450px; /* ✅ Bigger height on mobile for clear image */
+  }
+}
